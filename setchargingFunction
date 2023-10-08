@@ -1,0 +1,7 @@
+# This function is to turn on conservation mode on Lenovo IdeaPad (mine is IdeaPad slim 5i Pro) and this function is not mine
+#I found it on GitHub through Reddit but can't seem to find it again so, storing it here for safe keeping. 
+function setcharging()
+{
+        echo ${1:-1}  | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004\:00/conservation_mode
+}
+# put this function in the .bashrc file or create a separate script for this
